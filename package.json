@@ -1,0 +1,21 @@
+{
+  "name": "wscurl",
+  "version": "0.1.0",
+  "description": "curl/netcat-like tool to talk to a Websocket server.",
+  "main": "wscurl.js",
+  "bin": {
+    "wscurl": "./wscurl.js"
+  },
+  "keywords": [
+    "wscat",
+    "curl",
+    "netcat",
+    "websocket"
+  ],
+  "author": "Mayank Lahiri <mayank@iceroad.io>",
+  "license": "MIT",
+  "dependencies": {
+    "minimist": "^1.2.0",
+    "ws": "^1.1.1"
+  }
+}
