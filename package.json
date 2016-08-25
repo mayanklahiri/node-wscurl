@@ -1,6 +1,6 @@
 {
   "name": "wscurl",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "curl/netcat-like tool to talk to a Websocket server.",
   "main": "wscurl.js",
   "bin": {

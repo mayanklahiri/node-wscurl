@@ -15,16 +15,16 @@ function main(args) {
     var rl = readline.createInterface({
       input: process.stdin,
     });
-    rl.on('line', function(lineStr) {
-      ws.send(lineStr);
+    rl.on('line', function(line) {
+      ws.send(line);
     });
     rl.on('close', function() {
-      ws.close();
+      if (!args.wait) {
+        ws.close();
+      }
     });
   });
-  ws.on('message', function(data) {
-    console.log(data);
-  });
+  ws.on('message', console.log);
   ws.once('close', function() {
     return process.exit(0);
   });
