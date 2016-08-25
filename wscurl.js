@@ -24,7 +24,9 @@ function main(args) {
       }
     });
   });
-  ws.on('message', console.log);
+  ws.on('message', function(frame) {
+    console.log(frame);
+  });
   ws.once('close', function() {
     return process.exit(0);
   });
