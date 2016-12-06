@@ -27,8 +27,12 @@ function main(args) {
   ws.on('message', function(frame) {
     console.log(frame);
   });
-  ws.once('close', function() {
+  ws.once('close', function(code, message) {
+    console.error('Connection closed with code', code, message);
     return process.exit(0);
+  });
+  ws.on('error', function(err) {
+    console.error(err);
   });
 }
 
